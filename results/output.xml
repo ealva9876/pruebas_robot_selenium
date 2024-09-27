@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-06-26T19:25:01.706680" rpa="false" schemaversion="5">
+<suite id="s1" name="BasicSearch" source="C:\ProyectosPython\robotframework-selenium-example\test-cases\eBayTest\BasicSearch.robot">
+<test id="s1-t1" name="Search Google ebay sampe test" line="15">
+<kw name="Open Url With Chrome" owner="keywords">
+<kw name="Open Url" owner="keywords">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:02.074233" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-06-26T19:25:02.074233" elapsed="2.030535"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-26T19:25:04.104768" elapsed="0.152352"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:04.257120" level="INFO">Opening url 'https://www.ebay.com'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-26T19:25:04.257120" elapsed="4.084284"/>
+</kw>
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return !!document.body</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2024-06-26T19:25:08.341404" elapsed="0.013539"/>
+</kw>
+<arg>Chrome</arg>
+<arg>${url}</arg>
+<status status="PASS" start="2024-06-26T19:25:02.072213" elapsed="6.283774"/>
+</kw>
+<arg>${EBAY_URL}</arg>
+<status status="PASS" start="2024-06-26T19:25:02.071210" elapsed="6.284777"/>
+</kw>
+<kw name="Enter Keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:08.358587" level="INFO">Typing text 'cocina accesorios' into text field '//*[@id="gh-ac"]'.</msg>
+<arg>${EBAY_INPUTE_TEXT}</arg>
+<arg>${keyword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T19:25:08.357565" elapsed="0.225549"/>
+</kw>
+<arg>${REF_PALABRA_CLAVE}</arg>
+<status status="PASS" start="2024-06-26T19:25:08.355987" elapsed="0.228131"/>
+</kw>
+<kw name="Click Search Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EBAY_INPUTE_TEXT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T19:25:08.585116" elapsed="0.025592"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:08.611710" level="INFO">Clicking element 'id=gh-btn'.</msg>
+<arg>${EBAY_SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T19:25:08.610708" elapsed="2.397030"/>
+</kw>
+<status status="PASS" start="2024-06-26T19:25:08.584118" elapsed="2.424639"/>
+</kw>
+<kw name="Filter result by condition">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="mainContent"]/div[1]/div/div[2]/div[2]/div[2]/span</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T19:25:11.009787" elapsed="14.913895"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:27.336862" level="INFO">Clicking element '//*[@id="mainContent"]/div[1]/div/div[2]/div[2]/div[2]/span'.</msg>
+<arg>//*[@id="mainContent"]/div[1]/div/div[2]/div[2]/div[2]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T19:25:25.924684" elapsed="1.524233"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:30.056682" level="INFO">Simulating Mouse Over on element '//*[@id="mainContent"]/div[1]/div/div[2]/div[2]/div[2]/span'.</msg>
+<arg>//*[@id="mainContent"]/div[1]/div/div[2]/div[2]/div[2]/span</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-06-26T19:25:27.448917" elapsed="2.917024"/>
+</kw>
+<kw name="Mouse Down" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:32.063796" level="INFO">Simulating Mouse Down on element '//*[@id="mainContent"]/div[1]/div/div[2]/div[2]/div[2]/span'.</msg>
+<arg>//*[@id="mainContent"]/div[1]/div/div[2]/div[2]/div[2]/span</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="PASS" start="2024-06-26T19:25:30.366947" elapsed="2.010414"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:34.888697" level="INFO">Clicking element '//*[@id="s0-60-0-12-8-4-1-0-4[0]-68[1]-23-content-menu"]/li[2]/a'.</msg>
+<arg>//*[@id="s0-60-0-12-8-4-1-0-4[0]-68[1]-23-content-menu"]/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T19:25:32.377361" elapsed="4.857774"/>
+</kw>
+<status status="PASS" start="2024-06-26T19:25:11.008757" elapsed="26.226378"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REF_LINK_BUSCADO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-26T19:25:37.236123" elapsed="14.196109"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:51.653594" level="INFO">Current page contains element 'partial link:accesorios de cocina'.</msg>
+<arg>${REF_LINK_BUSCADO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-06-26T19:25:51.432232" elapsed="0.221362"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T19:25:53.655877" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T19:25:51.654596" elapsed="2.001281"/>
+</kw>
+<kw name="Obtiene Link">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-06-26T19:25:53.658913" level="INFO">Clicking link 'partial link:accesorios de cocina'.</msg>
+<arg>${Url}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-26T19:25:53.657897" elapsed="0.699928"/>
+</kw>
+<arg>${REF_LINK_BUSCADO}</arg>
+<status status="PASS" start="2024-06-26T19:25:53.656892" elapsed="0.700933"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-26T19:25:59.359716" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-26T19:25:54.358922" elapsed="5.000794"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-26T19:25:59.360734" elapsed="2.544218"/>
+</kw>
+<doc>Test eBay</doc>
+<tag>PruebaNavegacion</tag>
+<status status="PASS" start="2024-06-26T19:25:02.069228" elapsed="59.836724"/>
+</test>
+<doc>Basic search functionality</doc>
+<status status="PASS" start="2024-06-26T19:25:01.715213" elapsed="60.192740"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">PruebaNavegacion</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
